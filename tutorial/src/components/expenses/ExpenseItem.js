@@ -8,7 +8,7 @@ const ExpenseItem = (props) => {
   const [display, setDisplay] = useState(true);
 
   const deletHandler = () => {
-    fetch(`http://yexpenses.herokuapp.com/api/v1/delete/expense/${props.id}`, {
+    fetch(`https://yexpenses.herokuapp.com/api/v1/delete/expense/${props.id}`, {
       method: `DELETE`,
     })
       .then((i) => {

@@ -7,7 +7,7 @@ const App = () => {
   const [expenses, setExpenses] = useState([]);
   const [load, setLoad] = useState(false);
   const fetchData = () => {
-    fetch("http://yexpenses.herokuapp.com/api/v1/expenses")
+    fetch("https://yexpenses.herokuapp.com/api/v1/expenses")
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -30,7 +30,7 @@ const App = () => {
 
   const addExpenseHandler = (expense) => {
     setLoad(false);
-    fetch("http://yexpenses.herokuapp.com/api/v1/create/expense", {
+    fetch("https://yexpenses.herokuapp.com/api/v1/create/expense", {
       method: `POST`,
       body: JSON.stringify(expense),
       headers: {
